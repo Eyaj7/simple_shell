@@ -60,8 +60,8 @@ printstar();
 void printstar(void)
 {
 	int j = 0;
-	write(1, "\n\t\t\t", 5);
 
+	write(1, "\n\t\t\t", 5);
 	while (j < 75)
 	{
 		write(1, "*", 2);

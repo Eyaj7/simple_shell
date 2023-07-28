@@ -2,7 +2,7 @@
 
 /**
  * copyarray - a function
- * @line: a string 
+ * @line: a string
  * Return: returns the copied array
  */
 

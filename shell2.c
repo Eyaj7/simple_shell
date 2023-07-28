@@ -10,6 +10,7 @@ int getstr(char *str)
 {
 	char **line;
 	size_t siz = 0;
+
 	signal(SIGINT, sigintHandler);
 	line = malloc(24);
 	if (!line)
@@ -131,10 +132,12 @@ char **strbrk(char *line, char c)
 			if (tmp == NULL)
 			{
 				perror("Couldn't Reallocate");
-				return (NULL); }
+				return (NULL);
+			}
 			else
 			{
-				array = tmp; }
+				array = tmp;
+			}
 		}
 		if (line[y] == c)
 		{
