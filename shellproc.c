@@ -10,14 +10,14 @@ int (*getfunc(char *str))(char **line)
 {
 	int i = 0;
 	selecte selector[] = {
-		{"ls", _list},
-		{"l", _list},
-		{"ll", _list},
-		{"exit", _exit},
-		{"echo", _echor},
+		{"ls", lister},
+		{"l", lister},
+		{"ll", lister},
+		{"exit", exitor},
+		{"echo", echorr},
 		{"cd", changedire},
-		{"cat", _cat},
-		{"pwd", _pwd},
+		{"cat", cater},
+		{"pwd", pwder},
 		{"env", envir},
 		{"printenv", envir},
 		{"/bin/printenv", envir},
@@ -37,13 +37,13 @@ int (*getfunc(char *str))(char **line)
 }
 
 /**
- * shellproc - function that excutes the given commands
+ * shellprocessor - function that excutes the given commands
  * @line: pointer to an array of strings
  * @argv: pointer to the array of arguments
  * Return: returns 1 in success and -1 if it fails
  */
 
-int shellproc(char **line, char **argv)
+int shellprocessor(char **line, char **argv)
 {
 	int checker;
 	int i = 0;

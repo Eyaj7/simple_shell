@@ -1,4 +1,4 @@
-#include "simishell.h"
+#include "shell.h"
 /**
  * _getchar - function that reads a character
  * from the standard input
@@ -64,11 +64,11 @@ int _getline(char **adress, size_t *len)
 }
 
 /**
- * _echo - function to echo back any text you send
+ * echoer - function to echo back any text you send
  * @array: command and arguments's array
  * Return: returns 1 in success and -1 if it fails
  */
-int _echo(char *array[])
+int echoer(char *array[])
 {
 	int i = 1;
 
@@ -88,4 +88,4 @@ int _echo(char *array[])
 	}
 	write(1, "\n", 2);
 	return (1);
-
+}

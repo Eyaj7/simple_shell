@@ -1,12 +1,12 @@
-#include "simishell.h"
+#include "shell.h"
 
 /**
-* _list - function for /bin/ls to list files
+* lister - function for /bin/ls to list files
 * @line: command and arguments' array
 * Return: returns 1 in success and -1 if it fails
 */
 
-int _list(char *line[])
+int lister(char *line[])
 {
 	int status;
 	pid_t i, pid;
@@ -33,12 +33,12 @@ int _list(char *line[])
 }
 
 /**
-* _cat - a function which excutes the /bin/cat program to show text files
+* cater - a function which excutes the /bin/cat program to show text files
 * @line: an array of command and arguments
 * Return: returns 1 in success and -1 if it fails
 */
 
-int _cat(char *line[])
+int cater(char *line[])
 {
 	int status;
 	pid_t i, pid;
@@ -101,13 +101,13 @@ int builtincom(char **line)
 }
 
 /**
-* _pwd - a function which prints the current path
+* pwder - a function which prints the current path
 * @line: an array of command and arguments
 *
 * Return: returns 1 in success and -1 if it fails
 */
 
-int _pwd(char *line[])
+int pwder(char *line[])
 {
 	int status;
 	pid_t i, pid;
@@ -130,12 +130,12 @@ int _pwd(char *line[])
 }
 
 /**
-* _echor - a function which echo back any text
+* echorr - a function which echo back any text
 * @line: an array of command and arguments
 * Return: returns 1 in success and -1 if it fails
 */
 
-int _echor(char *line[])
+int echorr(char *line[])
 {
 	int status;
 	pid_t waiter, child;

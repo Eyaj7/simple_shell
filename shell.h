@@ -1,5 +1,5 @@
-#ifndef SIMISHELL_H
-#define SIMISHELL_H
+#ifndef SHELL_H
+#define SHELL_H
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -28,10 +28,10 @@ int (*funcptr)(char **line);
 
 void sigintHandler(int sig_num __attribute__((unused)));
 void printprompt(int i);
-int _exit(char *line[]);
-int _cat(char *line[]);
+int exitor(char *line[]);
+int cater(char *line[]);
 int getstr(char *str);
-int shellproc(char **line, char **argv);
+int shellprocessor(char **line, char **argv);
 char **strbrk(char *line, char c);
 int _getline(char **line, size_t *len);
 void farewell(void);
@@ -42,12 +42,12 @@ int strleng(char *s);
 void strcopy(char *src, char *dest);
 int strcomp(char *str, char *equ);
 void strmix(char *src, char *dest);
-int _list(char **line);
+int lister(char **line);
 int (*getfunc(char *str))(char **line);
-int _echor(char *line[]);
+int echorr(char *line[]);
 int builtincom(char **line);
 int changedire(char **line);
-int _pwd(char *line[]);
+int pwder(char *line[]);
 int envir(char *line[]);
 int maker(char *line[]);
 char _getchar(void);

@@ -16,10 +16,10 @@ int strcomp(char *str, char *equ)
 	{
 		return (0);
 	}
-	while (equ[i] != '\0' || str[i] != '\0')
+	while (equ[j] != '\0' || str[j] != '\0')
 	{
 
-		if (str[i] == equ[i])
+		if (str[j] == equ[j])
 		{
 			r = 1;
 		}
@@ -30,7 +30,7 @@ int strcomp(char *str, char *equ)
 		j++;
 	}
 
-	return (result);
+	return (r);
 }
 
 /**
